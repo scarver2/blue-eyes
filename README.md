@@ -1,11 +1,10 @@
 ![blue-eyes](lib/blue-eyes/generators/app/templates/public/images/blue-eyes-small.png)
 
 ## Why this exists
-I was looking for a way to build a Sinatra skeleton similar to running
 
-    rails new APP-NAME
+Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. [Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby. Thus, Ben has forked and renamed it *blue-eyes*. 
 
-[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing I could find and this gem is based largely off of it. It basically does everything equivalent for sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern ruby. Thus, I have forked and renamed it, hoping to keep it up-to-date.
+[Stan Carver II]() now maintains the *blue-eyes* gem as part of his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate.
 
 ## How to start
 
@@ -43,7 +42,6 @@ Directory structure:
     ├── application_controller_spec.rb
     └── spec_helper.rb
 ```
-
 
 ## Installation
 
@@ -119,7 +117,7 @@ class CreateUsers < ActiveRecord::Migration
 end
 ```
 
-Visit [http://localhost:9392/](http://localhost:9392/) to verify your app is running.
+Visit [http://localhost:9292/](http://localhost:9292/) to verify your app is running.
 
 You can also verify it is working by running `rspec` to see the passing test:
 
@@ -127,12 +125,13 @@ You can also verify it is working by running `rspec` to see the passing test:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/bennyfactor/blue-eyes .Feel free to contribute, but please consider that any contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct. In summary, be excellent to each other, and party on dudes.
+Bug reports and pull requests are welcome on GitHub at https://github.com/scarver2/blue-eyes. Feel free to contribute, but please consider that any contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct. In summary, be excellent to each other, and party on dudes.
 
 ## License
 
-    Copyright (c) 2016 Brian Emory
+    Copyright (c) 2016 Brian Emory (originally the Corneal Ruby Gem)
     Copyright (c) 2024 Ben Lamb
+    Copyright (c) 2025 Stan Carver II
 
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
