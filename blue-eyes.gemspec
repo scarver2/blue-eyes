@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 1.8.6'
 
   spec.files =
-    Dir.glob('lib/**/*', File::FNM_DOTMATCH) +
-    Dir.glob('test/**/*') +
+    Dir.glob('lib/**/*', File::FNM_DOTMATCH) &
+    Dir.glob('test/**/*') &
     %w[.ruby-version .simplecov Gemfile Gemfile.lock Guardfile LICENSE Rakefile README.md]
 
   spec.add_runtime_dependency('thor', '~> 1.4')
