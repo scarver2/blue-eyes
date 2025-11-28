@@ -5,12 +5,15 @@
 * [x] Change ownership to Stan Carver II
 * [ ] Consolidate LICENSE (appears in README)
 * [ ] Move contribution guidelines to CONTRIBUTING
-* [ ] Replace RSpec test suite with MiniTest
-* [ ] Implement Guard test suite runner
-* [ ] Implement Rubocop linter and conform gem
-* [ ] Implement SimpleCov test coverage analysis
+* [x] Replace RSpec test suite with MiniTest
+* [x] Implement Guard test suite runner
+* [x] Implement Rubocop linter and conform gem
+* [x] Implement SimpleCov test coverage analysis
 * [ ] Implement GitHub Actions workflow
-* [ ] Make fully-compatible with Ruby 3.x
+* [ ] Make gem fully-compatible with Ruby 3.x
+* [ ] Fix gem naming convention e.g. `blue_eyes` instead of `blue-eyes`
+* [ ] Update app template for Ruby 3
+* [ ] Publish to RubyGems
 
 ## Future Development
 
