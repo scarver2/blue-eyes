@@ -1,16 +1,16 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
-require "rake/testtask"
-require "bundler/gem_tasks"
-require "pry"
-
-Rake::TestTask.new(:spec) do |test|
-  test.libs << 'lib' << 'spec'
-  test.pattern = 'spec/**/*_spec.rb'
-end
-
-task :default => :spec
+require 'rake/testtask'
+require 'bundler/gem_tasks'
 
 task :console do
+  require 'pry'
   Pry.start
 end
+
+Rake::TestTask.new do |t|
+  t.test_files = FileList['test/**/*_test.rb']
+end
+
+task default: :test
