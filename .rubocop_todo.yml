@@ -99,14 +99,13 @@ Layout/MultilineMethodCallIndentation:
   Exclude:
     - 'lib/blue-eyes/extensions/string.rb'
 
-# Offense count: 2
+# Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: final_newline, final_blank_line
 Layout/TrailingEmptyLines:
   Exclude:
     - 'lib/blue-eyes/generators/app/templates/Gemfile'
-
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -276,7 +275,6 @@ Style/SpecialGlobalVars:
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
   Exclude:
-    - '.simplecov'
     - 'bin/blue-eyes'
     - 'lib/blue-eyes.rb'
     - 'lib/blue-eyes/cli.rb'
