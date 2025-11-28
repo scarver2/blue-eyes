@@ -19,6 +19,6 @@ class VersionTest < Minitest::Test
   def test_version_string
     assert_kind_of String, BlueEyes::VERSION::STRING
     assert_equal BlueEyes::VERSION::STRING,
-      [BlueEyes::VERSION::MAJOR, BlueEyes::VERSION::MINOR, BlueEyes::VERSION::TINY].join('.')
+                 [BlueEyes::VERSION::MAJOR, BlueEyes::VERSION::MINOR, BlueEyes::VERSION::TINY].join('.')
   end
 end

@@ -6,7 +6,6 @@ require 'simplecov'
 # require_relative "../lib/blue-eyes"
 require 'blue-eyes'
 
-
 # require_relative "../spec_helper"
 # require_relative "../lib/blue-eyes/"
 # require_all '../lib/blue-eyes'

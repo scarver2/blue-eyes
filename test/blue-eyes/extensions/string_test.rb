@@ -1,38 +1,38 @@
 # frozen_string_literal: false
 
-require_relative "../../test_helper"
+require_relative '../../test_helper'
 # require_relative "../../../lib/blue-eyes/extensions/string"
 
 CAMEL_CASES = [
-  ['my_app', 'MyApp'],
-  ['my_App', 'MyApp'],
-  ['MY_APP', 'MyApp'],
-  ['my-app', 'MyApp'],
-  ['MY-APP', 'MyApp'],
-  ['myapp', 'Myapp'],
-  ['MyApp', 'MyApp']
-]
+  %w[my_app MyApp],
+  %w[my_App MyApp],
+  %w[MY_APP MyApp],
+  %w[my-app MyApp],
+  %w[MY-APP MyApp],
+  %w[myapp Myapp],
+  %w[MyApp MyApp]
+].freeze
 
 DIRECTORY_NAME_CASES = [
-  ['my_app', 'my_app'],
-  ['my_App', 'my_app'],
-  ['MY_APP', 'my_app'],
-  ['my-app', 'my-app'],
-  ['my-App', 'my-app'],
-  ['MY-APP', 'my-app'],
-  ['myapp', 'myapp'],
-  ['MyApp', 'myapp']
-]
+  %w[my_app my_app],
+  %w[my_App my_app],
+  %w[MY_APP my_app],
+  %w[my-app my-app],
+  %w[my-App my-app],
+  %w[MY-APP my-app],
+  %w[myapp myapp],
+  %w[MyApp myapp]
+].freeze
 
 FILE_NAME_CASES = [
-  ['my_app', 'my_app'],
-  ['my_App', 'my_app'],
-  ['MY_APP', 'my_app'],
-  ['my-app', 'my_app'],
-  ['MY-APP', 'my_app'],
-  ['myapp', 'myapp'],
-  ['MyApp', 'my_app']
-]
+  %w[my_app my_app],
+  %w[my_App my_app],
+  %w[MY_APP my_app],
+  %w[my-app my_app],
+  %w[MY-APP my_app],
+  %w[myapp myapp],
+  %w[MyApp my_app]
+].freeze
 
 module BlueEyes
   module Extensions

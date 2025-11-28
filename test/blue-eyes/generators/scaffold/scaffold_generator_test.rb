@@ -8,12 +8,14 @@ class ScaffoldGeneratorTest < Minitest::Test
   end
 
   def test_create_model
-    skip
+    skip 'broken test'
+
     assert_respond_to subject, :create_model
   end
 
   def test_create_controller
-    skip
+    skip 'broken test'
+
     assert_respond_to subject, :create_controller
   end
 end
