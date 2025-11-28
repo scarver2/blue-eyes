@@ -13,13 +13,16 @@ group :development, :test do
   gem 'guard', require: false
   gem 'guard-bundler', require: false
   gem 'guard-minitest', require: false
-  # gem 'guard-rubocop', require: false
+  gem 'guard-rubocop', require: false
   gem 'irb', require: false
   gem 'minitest', require: false
   gem 'pry', require: false
   gem 'rake', require: false
-  # gem 'rubocop', require: false
-  # gem 'rubocop-minitest', require: false
-  # gem 'rubocop-performance', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-capybara', require: false
+  gem 'rubocop-minitest', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rake', require: false
+  gem 'rubocop-rspec', require: false
   gem 'simplecov', require: false
 end

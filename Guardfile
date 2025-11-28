@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-# TODO: Enable Rubocop
-# guard :rubocop, cli: ['-A'] do
-#   watch(/.+\.rb$/)
-#   watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
-# end
+guard :rubocop, cli: ['-A'] do
+  watch(/.+\.rb$/)
+  watch('Rakefile') { 'Rakefile' }
+  watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
+end
 
 guard :minitest do
   watch(%r{^test/(.*)/?(.*)_test\.rb$})
-  watch(%r{^test/test_helper\.rb$})      { 'test' }
+  watch(%r{^test/test_helper\.rb$}) { 'test' }
   watch(%r{^lib/(.*/)?([^/]+)\.rb$}) { |m| "test/#{m[1]}#{m[2]}_test.rb" }
 end
 

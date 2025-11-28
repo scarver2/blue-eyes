@@ -1,0 +1,9 @@
+AllCops:
+  NewCops: enable
+
+plugins:
+  - rubocop-capybara
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
