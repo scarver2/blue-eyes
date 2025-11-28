@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.summary     = "A Sinatra app generator."
   spec.description = "blue-eyes is a Sinatra app generator with Rails-like simplicity."
   spec.email       = "bennyfactor@iaatb.net"
-  spec.homepage    = "http://github.com/bennyfactor/blue-eyes/"
-  spec.authors     = ["Brian Emory, Ben Lamb"]
+  spec.homepage    = "http://github.com/scarver2/blue-eyes/"
+  spec.authors     = ["Brian Emory, Ben Lamb, Stan Carver II"]
   spec.licenses    = "MIT"
 
   spec.executables = ['blue-eyes']
