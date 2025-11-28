@@ -10,7 +10,6 @@ module BlueEyes
       say "BlueEyes #{BlueEyes::VERSION::STRING}"
     end
 
-
     # register(class_name, subcommand_alias, usage_list_string, description_string)
     register BlueEyes::Generators::AppGenerator, "new", "new APP_PATH", "Creates a new Sinatra application"
     register BlueEyes::Generators::ModelGenerator, "model", "model NAME", "Generate a model"
