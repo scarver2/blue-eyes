@@ -13,7 +13,14 @@
 * [ ] Make gem fully-compatible with Ruby 3.x
 * [ ] Fix gem naming convention e.g. `blue_eyes` instead of `blue-eyes`
 * [ ] Update app template for Ruby 3
-* [ ] Publish to RubyGems
+* [ ] Publish BlueEyes to RubyGems
+* [ ] Add `blue-eyes` to `GEMFILE` of generated app
+* [ ] Run generated app's test suite
+* [ ] Add .ruby-version file to generated app with version of Ruby used to generate app
+* [ ] Add .gitignore file to generated app with files to ignore
+* [ ] Add .gitattributes file to generated app
+* [ ] Replace Thin gem with Puma
+* [ ] Replace shotgun with Rackup
 
 ## Future Development
 
@@ -23,6 +30,7 @@
 * [ ] Remove Rails dependency
 * [ ] Create GitHub product page (scarver2.github.io/blue-eyes)
 * [ ] Create GitHub Wiki
+* [ ] Account for variations in ActiveRecord
 
 ## Under Consideration
 
