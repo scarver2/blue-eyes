@@ -10,6 +10,7 @@
 # TODO: lint lib and templates once tests are added
 AllCops:
   Exclude:
+    - 'bin/**/*'
     - 'app/**/*'
     - 'lib/**/*'
 
