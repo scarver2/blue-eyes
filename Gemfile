@@ -6,8 +6,6 @@ ruby File.read('.ruby-version').strip
 
 gemspec
 
-source 'https://rubygems.org'
-
 group :development, :test do
   gem 'fakefs', require: false
   gem 'guard', require: false
