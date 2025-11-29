@@ -6,7 +6,7 @@ $:.unshift lib unless $:.include?(lib)
 require 'blue_eyes/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'BlueEyes'
+  spec.name        = 'blue_eyes'
   spec.version     = BlueEyes::VERSION::STRING
   spec.summary     = 'A Sinatra app generator.'
   spec.description = 'BlueEyes is a Sinatra app generator with Rails-like simplicity.'
@@ -25,8 +25,9 @@ Gem::Specification.new do |spec|
     Dir.glob('test/**/*') &
     %w[.ruby-version .simplecov Gemfile Gemfile.lock Guardfile LICENSE Rakefile README.md]
 
-  spec.add_dependency('active_model_serializers', '~> 0.10.0.rc1')
-  spec.add_dependency('activesupport', '~> 7.0')
+  spec.add_dependency('active_model_serializers', '~> 0.10.15')
+  spec.add_dependency('activesupport', '~> 7.2')
   spec.add_dependency('thor', '~> 1.4')
+  
   spec.metadata['rubygems_mfa_required'] = 'true'
 end
