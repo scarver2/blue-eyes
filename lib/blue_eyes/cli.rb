@@ -5,7 +5,7 @@ module BlueEyes
 
     desc "-v", "Show BlueEyes version number"
     map %w[-v --version] => :version
-    # USAGE: blue-eyes -v
+    # USAGE: blue_eyes -v
     def version
       say "BlueEyes #{BlueEyes::VERSION::STRING}"
     end

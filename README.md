@@ -1,24 +1,23 @@
-![blue-eyes](lib/blue-eyes/generators/app/templates/public/images/blue-eyes-small.png)
+![BlueEyes](lib/blue_eyes/generators/app/templates/public/images/blue-eyes-small.png)
 
-## Why this exists
+## Why BlueEyes Exists
 
-Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. [Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby. Thus, Ben has forked and renamed it *blue-eyes*. 
+Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. 
+[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. 
+Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby.
+Thus, Ben has forked and renamed the repository to *blue-eyes*. 
 
-[Stan Carver II]() now maintains the *blue-eyes* gem as part of his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate.
+Fast-forward to 2025, [Stan Carver II]() maintains the *BlueEyes* gem as part of his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate.
 
-## How to start
+## How to Start
 
-Install the gem, run `blue-eyes new APP-NAME`, run `bundle install`, and you're all set! You can start up your server with `shotgun` and verify everything is working. It is as simple as that.
+Install the gem, run `blue_eyes new APP-NAME`, run `bundle install`, and you're all set! You can start up your server with `rackup` and verify everything is working. It is as simple as that!
 
-It uses a file structure similar to what you would see with Rails.
+### App Directory Structure
 
-Directory structure:
+BlueEyes creates a file structure similar to Ruby on Rails.
+
 ```
-├── config.ru
-├── Gemfile
-├── Gemfile.lock
-├── Rakefile
-├── README
 ├── app
 │   ├── controllers
 │   │   └── application_controller.rb
@@ -32,39 +31,43 @@ Directory structure:
 ├── db
 │   └── migrate
 ├── lib
-│   └── .gitkeep
-└── public
-|   ├── images
-|   ├── javascripts
-|   └── stylesheets
-|       └── main.css
-└── spec
-    ├── application_controller_spec.rb
-    └── spec_helper.rb
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── main.css
+├─── spec
+│   ├── application_controller_spec.rb
+│   └── spec_helper.rb
+├── config.ru
+├── Gemfile
+├── Gemfile.lock
+├── Rakefile
+└── README		
 ```
 
 ## Installation
 
-    gem install blue-eyes
+    gem install blue_eyes
 
 ## Commands
 ```
-blue-eyes -v              # Show blue-eyes version number
-blue-eyes help [COMMAND]  # Describe available commands or one specific command
-blue-eyes new APP-NAME    # Creates a new Sinatra application
-blue-eyes model NAME      # Generate a model
-blue-eyes controller NAME # Generate a controller
-blue-eyes scaffold NAME   # Generate a model with its associated views and controllers
+blue_eyes -v              # Show BlueEyes version number
+blue_eyes help [COMMAND]  # Describe available commands or one specific command
+blue_eyes new APP-NAME    # Creates a new Sinatra application
+blue_eyes model NAME      # Generate a model
+blue_eyes controller NAME # Generate a controller
+blue_eyes scaffold NAME   # Generate a model with its associated views and controllers
 ```
 The controller generator also have an optional views flag `--no-views` to create controllers without views.
 
-## Using blue-eyes
+## Using BlueEyes
 
 To generate your app:
 
-    blue-eyes new APP-NAME
+    blue_eyes new APP-NAME
 
-After blue-eyes is done generating your app, run `bundle install` from your app's directory:
+After BlueEyes is done generating your app, run `bundle install` from your app's directory:
 
     cd APP-NAME
     bundle install
@@ -75,11 +78,11 @@ You can then start your server with `rackup`:
 
 You can generate a model and migration file:
 
-    blue-eyes model NAME
+    blue_eyes model NAME
 
 You can also generate an entire MVC structure complete with a migration file:
 
-    blue-eyes scaffold NAME
+    blue_eyes scaffold NAME
 
 The resulting structure will look like this:
 
@@ -102,7 +105,7 @@ The resulting structure will look like this:
 
 You can also add your model attributes when you generate the scaffold structure and have them added to your migration file:
 
-    blue-eyes [model/scaffold] NAME name:string age:integer
+    blue_eyes [model/scaffold] NAME name:string age:integer
 
 ```
 class CreateUsers < ActiveRecord::Migration
@@ -123,31 +126,11 @@ You can also verify it is working by running `rspec` to see the passing test:
 
     1 example, 0 failures
 
-## Contributing
+# Important Files
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/scarver2/blue-eyes. Feel free to contribute, but please consider that any contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct. In summary, be excellent to each other, and party on dudes.
+[CONTRIBUTING](https://github.com/scarver2/blue-eyes/CONTRIBUTING.md)
+[LICENSE](https://github.com/scarver2/blue-eyes/LICENSE)
+[TODO](https://github.com/scarver2/blue-eyes/TODO.md)
 
-## License
 
-    Copyright (c) 2016 Brian Emory (originally the Corneal Ruby Gem)
-    Copyright (c) 2024 Ben Lamb
-    Copyright (c) 2025 Stan Carver II
-
-    Permission is hereby granted, free of charge, to any person obtaining
-    a copy of this software and associated documentation files (the
-    "Software"), to deal in the Software without restriction, including
-    without limitation the rights to use, copy, modify, merge, publish,
-    distribute, sublicense, and/or sell copies of the Software, and to
-    permit persons to whom the Software is furnished to do so, subject to
-    the following conditions:
-
-    The above copyright notice and this permission notice shall be
-    included in all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+&copy;2025 Stan Carver II

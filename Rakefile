@@ -5,7 +5,7 @@ require 'bundler/gem_tasks'
 
 desc 'Open a Pry console'
 task :console do
-  require 'blue-eyes'
+  require 'blue_eyes'
   require 'pry'
   Pry.start
 end

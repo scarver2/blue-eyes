@@ -18,33 +18,33 @@ AllCops:
 # Configuration parameters: TreatCommentsAsGroupSeparators, ConsiderPunctuation.
 Bundler/OrderedGems:
   Exclude:
-    - 'lib/blue-eyes/generators/app/templates/Gemfile'
+    - 'lib/blue_eyes/generators/app/templates/Gemfile'
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
 Gemspec/AddRuntimeDependency:
   Exclude:
-    - 'blue-eyes.gemspec'
+    - 'blue_eyes.gemspec'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: TreatCommentsAsGroupSeparators, ConsiderPunctuation.
 Gemspec/OrderedDependencies:
   Exclude:
-    - 'blue-eyes.gemspec'
+    - 'blue_eyes.gemspec'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: Severity.
 Gemspec/RequireMFA:
   Exclude:
-    - 'blue-eyes.gemspec'
+    - 'blue_eyes.gemspec'
 
 # Offense count: 1
 # Configuration parameters: Severity.
 Gemspec/RequiredRubyVersion:
   Exclude:
-    - 'blue-eyes.gemspec'
+    - 'blue_eyes.gemspec'
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
@@ -52,27 +52,27 @@ Gemspec/RequiredRubyVersion:
 # SupportedStyles: leading, trailing
 Layout/DotPosition:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Layout/EmptyLineAfterGuardClause:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
-    - 'lib/blue-eyes/generators/controller/controller_generator.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
+    - 'lib/blue_eyes/generators/controller/controller_generator.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Layout/EmptyLineAfterMagicComment:
   Exclude:
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Layout/EmptyLinesAfterModuleInclusion:
   Exclude:
-    - 'lib/blue-eyes/generators/controller/controller_generator.rb'
-    - 'lib/blue-eyes/generators/model/model_generator.rb'
+    - 'lib/blue_eyes/generators/controller/controller_generator.rb'
+    - 'lib/blue_eyes/generators/model/model_generator.rb'
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -80,8 +80,8 @@ Layout/EmptyLinesAfterModuleInclusion:
 # SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
 Layout/EmptyLinesAroundClassBody:
   Exclude:
-    - 'lib/blue-eyes/cli.rb'
-    - 'lib/blue-eyes/generators/app/templates/app/controllers/application_controller.rb'
+    - 'lib/blue_eyes/cli.rb'
+    - 'lib/blue_eyes/generators/app/templates/app/controllers/application_controller.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -89,7 +89,7 @@ Layout/EmptyLinesAroundClassBody:
 # SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines
 Layout/EmptyLinesAroundModuleBody:
   Exclude:
-    - 'lib/blue-eyes.rb'
+    - 'lib/blue_eyes.rb'
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
@@ -97,7 +97,7 @@ Layout/EmptyLinesAroundModuleBody:
 # SupportedStyles: aligned, indented, indented_relative_to_receiver
 Layout/MultilineMethodCallIndentation:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -105,32 +105,32 @@ Layout/MultilineMethodCallIndentation:
 # SupportedStyles: final_newline, final_blank_line
 Layout/TrailingEmptyLines:
   Exclude:
-    - 'lib/blue-eyes/generators/app/templates/Gemfile'
+    - 'lib/blue_eyes/generators/app/templates/Gemfile'
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: AllowSafeAssignment.
 Lint/AssignmentInCondition:
   Exclude:
-    - 'lib/blue-eyes/generators/model/model_generator.rb'
+    - 'lib/blue_eyes/generators/model/model_generator.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Lint/DuplicateRegexpCharacterClassElement:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Lint/RedundantStringCoercion:
   Exclude:
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Lint/SendWithMixinArgument:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -138,7 +138,7 @@ Lint/SendWithMixinArgument:
 # SupportedStyles: strict, consistent
 Lint/SymbolConversion:
   Exclude:
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
 
 # Offense count: 2
 # Configuration parameters: ExpectMatchingDefinition, CheckDefinitionPathHierarchy, CheckDefinitionPathHierarchyRoots, Regex, IgnoreExecutableScripts, AllowedAcronyms.
@@ -146,8 +146,8 @@ Lint/SymbolConversion:
 # AllowedAcronyms: CLI, DSL, ACL, API, ASCII, CPU, CSS, DNS, EOF, GUID, HTML, HTTP, HTTPS, ID, IP, JSON, LHS, QPS, RAM, RHS, RPC, SLA, SMTP, SQL, SSH, TCP, TLS, TTL, UDP, UI, UID, UUID, URI, URL, UTF8, VM, XML, XMPP, XSRF, XSS
 Naming/FileName:
   Exclude:
-    - 'lib/blue-eyes.rb'
-    - 'test/blue-eyes_test.rb'
+    - 'lib/blue_eyes.rb'
+    - 'test/blue_eyes_test.rb'
 
 # Offense count: 1
 # Configuration parameters: Mode, AllowedMethods, AllowedPatterns, AllowBangMethods, WaywardPredicates.
@@ -155,13 +155,13 @@ Naming/FileName:
 # WaywardPredicates: nonzero?
 Naming/PredicateMethod:
   Exclude:
-    - 'lib/blue-eyes/cli.rb'
+    - 'lib/blue_eyes/cli.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Style/ColonMethodCall:
   Exclude:
-    - 'lib/blue-eyes/generators/app/templates/config/initializers/redis.rb'
+    - 'lib/blue_eyes/generators/app/templates/config/initializers/redis.rb'
 
 # Offense count: 8
 # Configuration parameters: AllowedConstants.
@@ -169,34 +169,34 @@ Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
-    - 'lib/blue-eyes.rb'
-    - 'lib/blue-eyes/cli.rb'
-    - 'lib/blue-eyes/extensions/string.rb'
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
-    - 'lib/blue-eyes/generators/app/templates/app/controllers/application_controller.rb'
-    - 'lib/blue-eyes/generators/controller/controller_generator.rb'
-    - 'lib/blue-eyes/generators/model/model_generator.rb'
-    - 'lib/blue-eyes/generators/scaffold/scaffold_generator.rb'
+    - 'lib/blue_eyes.rb'
+    - 'lib/blue_eyes/cli.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/templates/app/controllers/application_controller.rb'
+    - 'lib/blue_eyes/generators/controller/controller_generator.rb'
+    - 'lib/blue_eyes/generators/model/model_generator.rb'
+    - 'lib/blue_eyes/generators/scaffold/scaffold_generator.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/Encoding:
   Exclude:
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowedVars, DefaultToNil.
 Style/FetchEnvVar:
   Exclude:
-    - 'lib/blue-eyes/generators/app/templates/config/environment.rb'
+    - 'lib/blue_eyes/generators/app/templates/config/environment.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: MinBodyLength, AllowConsecutiveConditionals.
 Style/GuardClause:
   Exclude:
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
 
 # Offense count: 19
 # This cop supports safe autocorrection (--autocorrect).
@@ -205,23 +205,23 @@ Style/GuardClause:
 # SupportedShorthandSyntax: always, never, either, consistent, either_consistent
 Style/HashSyntax:
   Exclude:
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
-    - 'lib/blue-eyes/generators/app/templates/Gemfile'
-    - 'lib/blue-eyes/generators/app/templates/config/environment.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/templates/Gemfile'
+    - 'lib/blue_eyes/generators/app/templates/config/environment.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/IfUnlessModifier:
   Exclude:
-    - 'lib/blue-eyes/generators/app/templates/config.ru'
-    - 'lib/blue-eyes/generators/app/templates/spec/spec_helper.rb'
+    - 'lib/blue_eyes/generators/app/templates/config.ru'
+    - 'lib/blue_eyes/generators/app/templates/spec/spec_helper.rb'
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: InverseMethods, InverseBlocks.
 Style/InverseMethods:
   Exclude:
-    - 'lib/blue-eyes/generators/model/model_generator.rb'
+    - 'lib/blue_eyes/generators/model/model_generator.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -229,38 +229,38 @@ Style/InverseMethods:
 # SupportedStyles: both, prefix, postfix
 Style/NegatedIf:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 5
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: PreferredDelimiters.
 Style/PercentLiteralDelimiters:
   Exclude:
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantCurrentDirectoryInPath:
   Exclude:
-    - 'lib/blue-eyes/generators/app/templates/Rakefile'
+    - 'lib/blue_eyes/generators/app/templates/Rakefile'
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/RedundantInterpolation:
   Exclude:
-    - 'lib/blue-eyes/generators/controller/controller_generator.rb'
+    - 'lib/blue_eyes/generators/controller/controller_generator.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantRegexpEscape:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 6
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantSelf:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 3
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -275,19 +275,19 @@ Style/SpecialGlobalVars:
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
   Exclude:
-    - 'bin/blue-eyes'
-    - 'lib/blue-eyes.rb'
-    - 'lib/blue-eyes/cli.rb'
-    - 'lib/blue-eyes/extensions/string.rb'
-    - 'lib/blue-eyes/generators/app/app_generator.rb'
-    - 'lib/blue-eyes/generators/app/templates/app/controllers/application_controller.rb'
-    - 'lib/blue-eyes/generators/app/templates/config/environment.rb'
-    - 'lib/blue-eyes/generators/app/templates/config/initializers/redis.rb'
-    - 'lib/blue-eyes/generators/app/templates/spec/application_controller_spec.rb'
-    - 'lib/blue-eyes/generators/app/templates/spec/spec_helper.rb'
-    - 'lib/blue-eyes/generators/controller/controller_generator.rb'
-    - 'lib/blue-eyes/generators/model/model_generator.rb'
-    - 'lib/blue-eyes/generators/scaffold/scaffold_generator.rb'
+    - 'bin/blue_eyes'
+    - 'lib/blue_eyes.rb'
+    - 'lib/blue_eyes/cli.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
+    - 'lib/blue_eyes/generators/app/app_generator.rb'
+    - 'lib/blue_eyes/generators/app/templates/app/controllers/application_controller.rb'
+    - 'lib/blue_eyes/generators/app/templates/config/environment.rb'
+    - 'lib/blue_eyes/generators/app/templates/config/initializers/redis.rb'
+    - 'lib/blue_eyes/generators/app/templates/spec/application_controller_spec.rb'
+    - 'lib/blue_eyes/generators/app/templates/spec/spec_helper.rb'
+    - 'lib/blue_eyes/generators/controller/controller_generator.rb'
+    - 'lib/blue_eyes/generators/model/model_generator.rb'
+    - 'lib/blue_eyes/generators/scaffold/scaffold_generator.rb'
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -295,7 +295,7 @@ Style/StringLiterals:
 # AllowedMethods: define_method
 Style/SymbolProc:
   Exclude:
-    - 'lib/blue-eyes/extensions/string.rb'
+    - 'lib/blue_eyes/extensions/string.rb'
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).

@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 require_relative '../../test_helper'
-# require_relative "../../../lib/blue-eyes/extensions/string"
+# require_relative "../../../lib/blue_eyes/extensions/string"
 
 CAMEL_CASES = [
   %w[my_app MyApp],
