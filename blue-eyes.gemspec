@@ -8,12 +8,15 @@ require 'blue-eyes/version'
 Gem::Specification.new do |spec|
   spec.name        = 'blue-eyes'
   spec.version     = BlueEyes::VERSION::STRING
+  spec.license     = 'MIT'
   spec.summary     = 'A Sinatra app generator.'
-  spec.description = 'blue-eyes is a Sinatra app generator with Rails-like simplicity.'
+  spec.description = 'BlueEyes is a Sinatra app generator with Rails-like simplicity.'
+  spec.authors     = ['Stan Carver II', 'Ben Lamb', 'Brian Emory']
   spec.email       = 'stan@a1webconsulting.com'
   spec.homepage    = 'https://github.com/scarver2/blue-eyes'
-  spec.authors     = ['Stan Carver II', 'Ben Lamb', 'Brian Emory']
-  spec.licenses    = 'MIT'
+  spec.metadata    = {
+    'source_code_uri' => 'https://github.com/scarver2/blue-eyes'
+  }
 
   spec.executables = ['blue-eyes']
 
@@ -27,5 +30,5 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency('thor', '~> 1.4')
   spec.add_runtime_dependency('activesupport', '~> 7.0')
-  spec.add_runtime_dependency('active_model_serializers', '~> 0.10.0.rc1')
+  spec.add_runtime_dependency('active_model_serializers', '~> 0.10.15')
 end
