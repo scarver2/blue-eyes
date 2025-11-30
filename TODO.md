@@ -21,6 +21,7 @@
 * [ ] Add .gitattributes file to generated app
 * [ ] Replace Thin gem with Puma
 * [ ] Replace shotgun with Rackup
+* [ ] Document each gem’s purpose in App
 
 ## Future Development
 
