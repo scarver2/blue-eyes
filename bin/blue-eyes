@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
-$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), "..", "lib")))
 
-require "blue-eyes"
+$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib')))
+
+require 'blue-eyes'
 
 BlueEyes::CLI.start
