@@ -1,4 +1,7 @@
-ENV["SINATRA_ENV"] = "test"
+# frozen_string_literal: true
+
+ENV['SINATRA_ENV'] = 'test'
+ENV['RACK_ENV'] = 'test' # Ensure Rack environment is set to test
 
 require_relative '../config/environment'
 require 'rack/test'
@@ -14,11 +17,16 @@ ActiveRecord::Migration.check_all_pending!
 
 ActiveRecord::Base.logger = nil
 
+configure :test do
+  disable :protection
+end
+
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
   config.include Rack::Test::Methods
   config.include Capybara::DSL
+
   DatabaseCleaner.strategy = :truncation
 
   config.before do
