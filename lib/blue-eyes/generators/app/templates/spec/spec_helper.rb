@@ -4,10 +4,13 @@ require_relative '../config/environment'
 require 'rack/test'
 require 'capybara/rspec'
 require 'capybara/dsl'
+require 'pry'
 
-if ActiveRecord::Migrator.needs_migration?
-  raise 'Migrations are pending. Run `rake db:migrate SINATRA_ENV=test` to resolve the issue.'
-end
+# TODO: Check ActiveRecord version
+# if ActiveRecord::Migrator.needs_migration?
+#   raise 'Migrations are pending. Run `rake db:migrate SINATRA_ENV=test` to resolve the issue.'
+# end
+ActiveRecord::Migration.check_all_pending!
 
 ActiveRecord::Base.logger = nil
 
@@ -25,12 +28,10 @@ RSpec.configure do |config|
   config.after do
     DatabaseCleaner.clean
   end
-
-  config.order = 'default'
 end
 
 def app
-  Rack::Builder.parse_file('config.ru').first
+  Rack::Builder.parse_file('config.ru')
 end
 
 Capybara.app = app
