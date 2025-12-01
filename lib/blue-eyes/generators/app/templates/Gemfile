@@ -1,24 +1,26 @@
 source 'http://rubygems.org'
 
+# TODO: Read .ruby-version
+
 gem 'sinatra'
-gem 'activerecord', '~> 5.2', :require => 'active_record'
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'activerecord', require: 'active_record'
+gem 'sinatra-activerecord', require: 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
-gem 'sqlite3', '~> 1.4'
-gem 'thin'
-gem 'shotgun'
+gem 'sqlite3'
 gem 'pry'
 gem 'bcrypt'
-gem 'tux'
+# TODO: gem 'tux'
+gem 'puma'
+gem 'rackup'
+
+group :development do
+  gem 'rubocop'
+end
 
 group :test do
   gem 'rspec'
   gem 'capybara'
   gem 'rack-test'
-  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
-end
-
-group :development do
-  gem 'rubocop'
+  gem 'database_cleaner'
 end
