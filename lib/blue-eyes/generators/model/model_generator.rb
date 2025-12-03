@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 require 'thor/group'
 require 'active_support/inflector'
 
 module BlueEyes
   module Generators
+    # Generates an ActiveRecord model
     class ModelGenerator < Thor::Group
       include Thor::Actions
 
@@ -27,12 +30,16 @@ module BlueEyes
         @migration_name       = "create_#{table_name}"
         @migration_class_name = migration_name.camel_case
 
-        map_attributes(attributes)
+        attributes.map! do |attribute|
+          field = attribute.split(':')
+          { name: field[0], type: field[1] || 'string' }
+        end
       end
 
       def create_model
         unless model_name == name
-          say "[WARNING] The model name '#{name}' was recognized as a plural, using the singular '#{model_name}' instead."
+          say '[WARNING] ' &
+              "The model name '#{name}' was recognized as a plural, using the singular '#{model_name}' instead."
         end
 
         template 'model.rb.erb', File.join('app/models', "#{file_name}.rb")
@@ -53,13 +60,8 @@ module BlueEyes
         end
       end
 
-      private
-
-      def map_attributes(attributes)
-        attributes.map! do |attribute|
-          field = attribute.split(':')
-          { name: field[0], type: field[1] || 'string' }
-        end
+      def create_spec
+        template 'model_spec.rb.erb', File.join('spec/models', "#{file_name}_spec.rb")
       end
     end
   end
