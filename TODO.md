@@ -2,8 +2,9 @@
 
 ## Active Development
 
+### blue-eyes gem
 * [x] Change ownership to Stan Carver II
-* [ ] Consolidate LICENSE (appears in README)
+* [ ] Consolidate LICENSE (also appears in README)
 * [ ] Move contribution guidelines to CONTRIBUTING
 * [x] Replace RSpec test suite with MiniTest
 * [x] Implement Guard test suite runner
@@ -12,26 +13,32 @@
 * [ ] Implement GitHub Actions workflow
 * [ ] Make gem fully-compatible with Ruby 3.x
 * [ ] Fix gem naming convention e.g. `blue_eyes` instead of `blue-eyes`
-* [ ] Update app template for Ruby 3
 * [ ] Publish BlueEyes to RubyGems
-* [ ] Add `blue-eyes` to `GEMFILE` of generated app
-* [ ] Run generated app's test suite
-* [ ] Add .ruby-version file to generated app with version of Ruby used to generate app
-* [ ] Add .gitignore file to generated app with files to ignore
-* [ ] Add .gitattributes file to generated app
-* [ ] Replace Thin gem with Puma
-* [ ] Replace shotgun with Rackup
-* [ ] Document each gem’s purpose in App
-
-## Future Development
-
-* [ ] Add templates for monolith. 
-* [ ] Add template for microsite.
-* [ ] Add template for microservices Sinatra app,
-* [ ] Remove Rails dependency
 * [ ] Create GitHub product page (scarver2.github.io/blue-eyes)
 * [ ] Create GitHub Wiki
-* [ ] Account for variations in ActiveRecord
+* [ ] Add Frankie's template for monolith
+* [ ] Add Frankie's template for microsite
+* [ ] Add Frankie's template for microservices
+* [ ] Remove Rails dependency?
+* [ ] Implement tux gem if still relevant
+
+### BlueEyes generated app
+* [ ] Account for various versions of ActiveRecord
+* [ ] Add .gitattributes file
+* [ ] Add .gitignore file
+* [ ] Add .ruby-version file
+* [x] Add `blue-eyes` to `GEMFILE` for testing
+* [ ] Add guard gem
+* [ ] Add guard-rubocop 
+* [ ] Add rubocop
+* [ ] Add rubocop gem
+* [ ] Add simplecov
+* [ ] Add simplecov gem
+* [ ] Document each gem’s purpose
+* [ ] Replace shotgun with Rackup
+* [ ] Replace Thin gem with Puma
+* [ ] Run generated app's test suite
+* [ ] Update app template for Ruby 3
 
 ## Under Consideration
 
