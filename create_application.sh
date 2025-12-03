@@ -29,11 +29,16 @@ bundle exec blue-eyes scaffold Post title body:text
 bundle exec rake db:migrate
 SINATRA_ENV=test bundle exec rake db:migrate
 
+# Run app linter
+bundle exec rubocop
+
 # Run app specs
 bundle exec rspec
 
-# Run web server
-bundle exec rackup
+# Run web server (enable as needed)
+# bundle exec rackup
+
+# TODO: replace rackup with Guardfile
 
 # TODO: open browser to http://localhost:9292
 # open http://localhost:9292
