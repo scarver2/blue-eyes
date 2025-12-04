@@ -1,0 +1,48 @@
+# frozen_string_literal: true
+
+require_relative '../spec_helper'
+
+describe <%= class_name %> do
+  it 'has a valid factory' do
+    skip 'factories not implemented'
+    expect(build(:<%= file_name %>)).to be_valid
+  end
+
+  it 'instantiates' do
+    expect(described_class.new).to be_valid
+  end
+# TODO: implement attribute tests
+# <% attributes.each do |attribute| -%>
+#   it '#<%= attribute[:name] %>' do
+#     skip 'attribute type not implemented'
+#     case <%= attribute[:type] %>
+#     when 'string'
+#       expect(described_class.new).to be_valid
+#     when 'integer'
+#       expect(described_class.new).to be_valid
+#     when 'float'
+#       expect(described_class.new).to be_valid
+#     when 'boolean'
+#       expect(described_class.new).to be_valid
+#     when 'date'
+#       expect(described_class.new).to be_valid
+#     when 'datetime'
+#       expect(described_class.new).to be_valid
+#     when 'time'
+#       expect(described_class.new).to be_valid
+#     when 'decimal'
+#       expect(described_class.new).to be_valid
+#     when 'text'
+#       expect(described_class.new).to be_valid
+#     when 'binary'
+#       expect(described_class.new).to be_valid
+#     when 'json'
+#       expect(described_class.new).to be_valid
+#     when 'jsonb'
+#       expect(described_class.new).to be_valid
+#     when 'uuid'
+#       expect(described_class.new).to be_valid
+#     end
+#   end
+# <% end %>
+end
