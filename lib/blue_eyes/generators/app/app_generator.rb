@@ -33,7 +33,7 @@ module BlueEyes
 
       # Create empty directories
       def create_empty_directories
-        %w[config/initializers lib spec].each do |dir|
+        %w[config/initializers bin lib spec].each do |dir|
           empty_directory File.join(@app_path, dir)
         end
 
@@ -41,6 +41,12 @@ module BlueEyes
 
         create_file File.join(@app_path, 'lib', '.gitkeep')
         template 'config/environment.rb', File.join(@app_path, 'config/environment.rb')
+      end
+
+      def create_bin_dev
+        file_path = File.join(@app_path, 'bin/dev')
+        copy_file 'bin/dev', file_path
+        system "chmod a+x #{file_path}"
       end
 
       def create_public_directory
@@ -88,6 +94,11 @@ module BlueEyes
 
       def create_guardfile
         copy_file 'Guardfile.erb', File.join(@app_path, 'Guardfile')
+      end
+
+      def create_procfile
+        copy_file 'Procfile.erb', File.join(@app_path, 'Procfile')
+        copy_file 'Procfile.dev.erb', File.join(@app_path, 'Procfile.dev')
       end
 
       def create_rakefile

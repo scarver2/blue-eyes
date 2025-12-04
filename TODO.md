@@ -21,27 +21,29 @@
 * [ ] Add Frankie's template for microservices
 
 ### BlueEyes generated app
-* [ ] Account for various versions of ActiveRecord
 * [ ] Add .gitattributes file
 * [ ] Add .gitignore file
-* [ ] Add .ruby-version file
+* [x] Add .ruby-version file
 * [x] Add `blue-eyes` to `GEMFILE` for testing
-* [ ] Add guard gem
-* [ ] Add guard-rubocop 
-* [ ] Add rubocop
-* [ ] Add rubocop gem
-* [ ] Add simplecov
+* [ ] Add factory_bot gem and guard-factory_bot gem
+* [x] Add guard gem
+* [ ] Add guard-livereload gem
+* [ ] Add guard-rack gem
+* [ ] Add rubocop gem and guard-rubocop gem
 * [ ] Add simplecov gem
 * [ ] Document each gem’s purpose
-* [ ] Replace shotgun with Rackup
-* [ ] Replace Thin gem with Puma
-* [ ] Run generated app's test suite
-* [ ] Update app template for Ruby 3
+* [x] Replace shotgun with Rackup
+* [x] Replace Thin gem with Puma
+* [x] Run generated app's test suite
+* [ ] Update app for Ruby 3
+* [ ] Modernize HTML templates, perhaps using Tailwind CSS
+* [ ] Add Procfile
 
 ## Under Consideration
 
 * Consider removing `blue-eyes`'s built-in `String` monkey-patch extensions module. Two replacement robust Ruby Gem options are:
 ** [StringEx](https://github.com/rsl/stringex)
 ** Rails' [ActiveSupport](https://api.rubyonrails.org/classes/String.html)
+* Account for various versions of ActiveRecord?
 * Remove Rails' active_model_serializers dependency?
 * Implement RIPL like *tux* gem, if still relevant
