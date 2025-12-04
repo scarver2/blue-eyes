@@ -9,10 +9,6 @@ require 'sinatra/activerecord'
 
 Bundler.require(:default, ENV.fetch('SINATRA_ENV', nil))
 
-class ApplicationRecord < ActiveRecord::Base
-  self.abstract_class = true
-end
-
 set :database, {
   adapter: 'sqlite3',
   database: "db/#{ENV.fetch('SINATRA_ENV', nil)}.sqlite3"

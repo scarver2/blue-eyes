@@ -66,32 +66,32 @@ module BlueEyes
       end
 
       def create_ruby_version
-        template '.ruby-version', File.join(@app_path, '.ruby-version')
+        template '.ruby-version.erb', File.join(@app_path, '.ruby-version')
       end
 
       def create_rubocop_config
-        copy_file '.rubocop_todo.yml', File.join(@app_path, '.rubocop_todo.yml')
-        template '.rubocop.yml', File.join(@app_path, '.rubocop.yml')
+        copy_file '.rubocop_todo.yml.erb', File.join(@app_path, '.rubocop_todo.yml')
+        template '.rubocop.yml.erb', File.join(@app_path, '.rubocop.yml')
       end
 
       def create_simplecov
-        template '.simplecov', File.join(@app_path, '.simplecov')
+        template '.simplecov.erb', File.join(@app_path, '.simplecov')
       end
 
       def create_rackup_config
-        template 'config.ru', File.join(@app_path, 'config.ru')
+        template 'config.ru.erb', File.join(@app_path, 'config.ru')
       end
 
       def create_gemfile
-        template 'Gemfile', File.join(@app_path, 'Gemfile')
+        template 'Gemfile.erb', File.join(@app_path, 'Gemfile')
       end
 
       def create_guardfile
-        copy_file 'Guardfile', File.join(@app_path, 'Guardfile')
+        copy_file 'Guardfile.erb', File.join(@app_path, 'Guardfile')
       end
 
       def create_rakefile
-        template 'Rakefile', File.join(@app_path, 'Rakefile')
+        template 'Rakefile.erb', File.join(@app_path, 'Rakefile')
       end
 
       def create_readme

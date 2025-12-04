@@ -6,8 +6,6 @@ AllCops:
   TargetRubyVersion: 3.0
 
 plugins:
-  - rubocop-capybara
   - rubocop-minitest
   - rubocop-performance
   - rubocop-rake
-  - rubocop-rspec
