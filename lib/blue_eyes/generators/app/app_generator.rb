@@ -17,7 +17,7 @@ module BlueEyes
       class_option :bundle, type: :boolean, desc: 'Run bundle after generating the app'
       class_option :git, type: :boolean, desc: 'Initialize a Git repository'
 
-      # Creates instance variables from options passed to blue-eyes.
+      # Creates instance variables from options passed to BlueEyes.
       def setup
         @app_path = name.directory_name
         @name     = name.file_name

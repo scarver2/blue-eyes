@@ -9,7 +9,7 @@ class ControllerGeneratorTest < Minitest::Test
 
   def test_source_root
     root_path = File.expand_path('../../../..', __dir__)
-    absolute_template_path = [root_path, '/lib/blue-eyes/generators/controller'].join
+    absolute_template_path = [root_path, '/lib/blue_eyes/generators/controller'].join
 
     assert_equal subject.source_root, absolute_template_path
   end

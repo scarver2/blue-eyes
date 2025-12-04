@@ -1,10 +1,10 @@
-![blue-eyes](lib/blue-eyes/generators/app/templates/public/images/blue-eyes-small.png)
+![BlueEyes](lib/blue_eyes/generators/app/templates/public/images/blue-eyes-small.png)
 
 ## Why this exists
 
 Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. [Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby. Thus, Ben has forked and renamed it *blue-eyes*. 
 
-[Stan Carver II]() now maintains the *blue-eyes* gem as part of his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate.
+[Stan Carver II]() now maintains the *BlueEyes* gem as part of his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate.
 
 ## How to start
 

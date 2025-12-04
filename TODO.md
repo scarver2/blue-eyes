@@ -2,7 +2,7 @@
 
 ## Active Development
 
-### blue-eyes gem
+### BlueEyes gem
 * [x] Change ownership to Stan Carver II
 * [ ] Consolidate LICENSE (also appears in README)
 * [ ] Move contribution guidelines to CONTRIBUTING
@@ -11,16 +11,14 @@
 * [x] Implement Rubocop linter and conform gem
 * [x] Implement SimpleCov test coverage analysis
 * [ ] Implement GitHub Actions workflow
-* [ ] Make gem fully-compatible with Ruby 3.x
-* [ ] Fix gem naming convention e.g. `blue_eyes` instead of `blue-eyes`
+* [x] Make gem fully-compatible with Ruby 3.x
+* [x] Fix gem naming convention e.g. `blue_eyes` instead of `blue-eyes`
 * [ ] Publish BlueEyes to RubyGems
 * [ ] Create GitHub product page (scarver2.github.io/blue-eyes)
 * [ ] Create GitHub Wiki
 * [ ] Add Frankie's template for monolith
 * [ ] Add Frankie's template for microsite
 * [ ] Add Frankie's template for microservices
-* [ ] Remove Rails dependency?
-* [ ] Implement tux gem if still relevant
 
 ### BlueEyes generated app
 * [ ] Account for various versions of ActiveRecord
@@ -42,7 +40,8 @@
 
 ## Under Consideration
 
-Consider removing `blue-eyes`'s built-in `String` monkey-patch extensions module. Two replacement robust Ruby Gem options are:
-* [StringEx](https://github.com/rsl/stringex)
-* Rails' [ActiveSupport](https://api.rubyonrails.org/classes/String.html)
-
+* Consider removing `blue-eyes`'s built-in `String` monkey-patch extensions module. Two replacement robust Ruby Gem options are:
+** [StringEx](https://github.com/rsl/stringex)
+** Rails' [ActiveSupport](https://api.rubyonrails.org/classes/String.html)
+* Remove Rails' active_model_serializers dependency?
+* Implement RIPL like *tux* gem, if still relevant
