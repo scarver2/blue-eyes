@@ -107,7 +107,7 @@ module BlueEyes
       def create_database_initializer
         # TODO: return if @database.empty?
 
-        template('config/initializers/database.rb',
+        template('config/initializers/database.rb.erb',
                  File.join(@app_path, 'config/initializers/database.rb'))
       end
 

@@ -4,13 +4,19 @@
 ENV['RACK_ENV'] = ENV['SINATRA_ENV'] ||= 'development'
 
 require 'bundler/setup'
+require 'sinatra'
+require 'sinatra/activerecord'
+
 Bundler.require(:default, ENV.fetch('SINATRA_ENV', nil))
 
-ActiveRecord::Base.establish_connection(
+class ApplicationRecord < ActiveRecord::Base
+  self.abstract_class = true
+end
+
+set :database, {
   adapter: 'sqlite3',
-  database: "db/#{ENV.fetch('SINATRA_ENV', nil)}"
-  # database: "db/#{ENV.fetch('SINATRA_ENV', nil)}.sqlite"
-)
+  database: "db/#{ENV.fetch('SINATRA_ENV', nil)}.sqlite3"
+}
 
 require './app/controllers/application_controller'
 require_all 'app'
