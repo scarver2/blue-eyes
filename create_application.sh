@@ -38,7 +38,7 @@ bundle exec rspec
 # Run web server (enable as needed)
 # bundle exec rackup
 
-# TODO: replace rackup with Guardfile
+# TODO: replace rackup with Guardfile and/or Foreman
 
 # TODO: open browser to http://localhost:9292
 # open http://localhost:9292
