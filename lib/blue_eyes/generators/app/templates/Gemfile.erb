@@ -1,0 +1,39 @@
+# frozen_string_literal: true
+
+source 'http://rubygems.org'
+
+ruby File.read('.ruby-version').strip
+
+gem 'puma', '~> 7.1'
+gem 'rackup', '~> 2.2'
+gem 'require_all', '~> 3.0'
+gem 'sinatra', '~> 4.2'
+gem 'sinatra-activerecord', '~> 2.0'
+gem 'sqlite3', '~> 2.8'
+
+group :development do
+  gem 'guard', '~> 2.19', require: false
+  gem 'guard-bundler', '~> 3.0', require: false
+  gem 'guard-rspec', '~> 4.7', require: false
+  gem 'guard-rubocop', '~> 1.5', require: false
+  gem 'rubocop', '~> 1.81', require: false
+  gem 'rubocop-capybara', '~> 2.22', require: false
+  gem 'rubocop-factory_bot', require: false
+  gem 'rubocop-minitest', '~> 0.38', require: false
+  gem 'rubocop-performance', '~> 1.26', require: false
+  gem 'rubocop-rake', '~> 0.7', require: false
+  gem 'rubocop-rspec', '~> 3.8', require: false
+end
+
+group :development, :test do
+  gem 'capybara', '~> 3.40'
+  gem 'database_cleaner', '~> 2.1'
+  gem 'factory_bot', '~> 6.5'
+  gem 'faker', '~> 3.5'
+  gem 'minitest', '~> 5.25', require: false
+  gem 'pry', '~> 0.15'
+  gem 'rack-test', '~> 2.2'
+  gem 'rake', '~> 13.2'
+  gem 'rspec', '~> 3.13'
+  gem 'simplecov', '~> 0.22', require: false
+end

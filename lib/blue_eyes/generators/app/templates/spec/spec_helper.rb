@@ -9,17 +9,13 @@ require 'capybara/dsl'
 require 'factory_bot'
 require 'pry'
 require 'rack/test'
+require 'simplecov'
 
 def app
   Rack::Builder.parse_file('config.ru')
 end
 
 ActiveRecord::Base.logger = nil
-
-# TODO: Check ActiveRecord version
-# if ActiveRecord::Migrator.needs_migration?
-#   raise 'Migrations are pending. Run `rake db:migrate SINATRA_ENV=test` to resolve the issue.'
-# end
 ActiveRecord::Migration.check_all_pending!
 Capybara.app = app
 DatabaseCleaner.strategy = :truncation

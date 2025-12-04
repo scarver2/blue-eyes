@@ -1,0 +1,25 @@
+# frozen_string_literal: true
+
+guard :bundler do
+  require 'guard/bundler'
+  require 'guard/bundler/verify'
+  helper = Guard::Bundler::Verify.new
+
+  files = ['Gemfile']
+  files += Dir['*.gemspec'] if files.any? { |f| helper.uses_gemspec?(f) }
+
+  # Assume files are symlinked from somewhere
+  files.each { |file| watch(helper.real_path(file)) }
+end
+
+guard :rubocop, cli: ['-A'] do
+  watch(/.+\.rb$/)
+  watch('Rakefile') { 'Rakefile' }
+  watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
+end
+
+guard :rspec, cmd: 'bundle exec rspec' do
+  watch(%r{^spec/(.*)/?(.*)_test\.rb$})
+  watch(%r{^spec/spec_helper\.rb$}) { 'spec' }
+  watch(%r{^lib/(.*/)?([^/]+)\.rb$}) { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
+end
