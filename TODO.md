@@ -19,11 +19,13 @@
 * [ ] Add Frankie's template for monolith
 * [ ] Add Frankie's template for microsite
 * [ ] Add Frankie's template for microservices
+* [x] Fixup BlueEyes' logo
 
 ### BlueEyes generated app
 * [ ] Add .gitattributes file
 * [ ] Add .gitignore file
 * [x] Add .ruby-version file
+* [ ] Add .simplecov file
 * [x] Add `blue-eyes` to `GEMFILE` for testing
 * [ ] Add factory_bot gem and guard-factory_bot gem
 * [x] Add guard gem
@@ -38,6 +40,10 @@
 * [ ] Update app for Ruby 3
 * [ ] Modernize HTML templates, perhaps using Tailwind CSS
 * [ ] Add Procfile
+* [ ] Add Guardfile
+* [ ] Add Rakefile
+* [ ] Add bin/dev script
+* [ ] Generate README with AppName and instructions
 
 ## Under Consideration
 
