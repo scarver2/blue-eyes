@@ -158,7 +158,7 @@ You can run `bundle exec rubocop -A` to automatically fix any linting issues. It
 
 You can run `bundle exec guard` for continuous testing and linting while developing your application. Or,
 
-Better yet, you can execute `bin/dev` to start your server, run your tests, and lint your code all at once. Any changes to your application will automatically reload your application, run your tests, and/or lint your code. 💙 Developer happiness acheived. 💙
+Better yet, you can execute `bin/dev` to start your server, run your tests, and lint your code all at once. Any changes to your application will automatically reload your application, run your tests, and/or lint your code. 💙 Developer happiness achieved. 💙
 
 # Important Files
 
