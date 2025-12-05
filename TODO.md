@@ -4,8 +4,8 @@
 
 ### BlueEyes gem
 * [x] Change ownership to Stan Carver II
-* [ ] Consolidate LICENSE (also appears in README)
-* [ ] Move contribution guidelines to CONTRIBUTING
+* [x] Consolidate LICENSE (also appears in README)
+* [x] Move contribution guidelines to CONTRIBUTING
 * [x] Replace RSpec test suite with MiniTest
 * [x] Implement Guard test suite runner
 * [x] Implement Rubocop linter and conform gem
@@ -37,19 +37,17 @@
 * [x] Replace shotgun with Rackup
 * [x] Replace Thin gem with Puma
 * [x] Run generated app's test suite
-* [ ] Update app for Ruby 3
-* [ ] Modernize HTML templates, perhaps using Tailwind CSS
+* [x] Update app for Ruby 3
+* [ ] Modernize HTML templates, perhaps using [HTML5 Boilerplate](https://html5boilerplate.com) or [Tailwind](https://tailwindcss.com)
 * [ ] Add Procfile
 * [ ] Add Guardfile
 * [ ] Add Rakefile
-* [ ] Add bin/dev script
+* [x] Add bin/dev script
 * [ ] Generate README with AppName and instructions
 
 ## Under Consideration
 
-* Consider removing `blue-eyes`'s built-in `String` monkey-patch extensions module. Two replacement robust Ruby Gem options are:
-** [StringEx](https://github.com/rsl/stringex)
-** Rails' [ActiveSupport](https://api.rubyonrails.org/classes/String.html)
-* Account for various versions of ActiveRecord?
+* Consider removing BlueEyes's built-in `String` monkey-patch extensions module. Two robust Ruby Gem replacements are [StringEx](https://github.com/rsl/stringex) or [ActiveSupport](https://api.rubyonrails.org/classes/String.html).
+* Account for syntax differences in versions of ActiveRecord
 * Remove Rails' active_model_serializers dependency?
-* Implement RIPL like *tux* gem, if still relevant
+* Implement RIPL like [tux](https://github.com/cldwalker/tux) gem, if still relevant
