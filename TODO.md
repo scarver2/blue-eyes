@@ -1,4 +1,4 @@
-# blue-eyes TODO List
+# BlueEyes' TODO List
 
 ## Active Development
 
