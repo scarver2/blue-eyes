@@ -145,9 +145,9 @@ You can also verify it is working by running `rspec` to see the passing test:
 
 # Important Files
 
-[CONTRIBUTING](https://github.com/scarver2/blue-eyes/CONTRIBUTING.md)
-[LICENSE](https://github.com/scarver2/blue-eyes/LICENSE)
-[TODO](https://github.com/scarver2/blue-eyes/TODO.md)
+[CONTRIBUTING](https://github.com/scarver2/blue-eyes/blob/main/CONTRIBUTING.md)
+[LICENSE](https://github.com/scarver2/blue-eyes/blob/main/LICENSE)
+[TODO](https://github.com/scarver2/blue-eyes/blob/main/TODO.md)
 
 
 &copy;2025 Stan Carver II
