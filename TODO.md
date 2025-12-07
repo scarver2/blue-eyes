@@ -39,8 +39,8 @@
 * [x] Run generated app's test suite
 * [x] Update app for Ruby 3
 * [ ] Modernize HTML templates, perhaps using [HTML5 Boilerplate](https://html5boilerplate.com) or [Tailwind](https://tailwindcss.com)
-* [ ] Add Procfile
-* [ ] Add Guardfile
+* [x] Add Procfile
+* [x] Add Guardfile
 * [ ] Add Rakefile
 * [x] Add bin/dev script
 * [ ] Generate README with AppName and instructions
