@@ -1,25 +1,18 @@
 ![BlueEyes](lib/blue_eyes/generators/app/templates/public/images/blue-eyes-small.png)
 
-## Why this exists
+## Why BlueEyes Exists
 
 Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. [Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby. Thus, Ben has forked and renamed it *blue-eyes*.
 
 [Stan Carver II]() now maintains the *BlueEyes* gem as part of his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate.
 
-## How to start
+## How to Start
 
-Install the gem, run `blue-eyes new APP-NAME`, run `bundle install`, and you're all set! You can start up your server with `shotgun` and verify everything is working. It is as simple as that.
+Install the gem, run `blue-eyes new APP-NAME`, run `bundle install`, and you're all set! You can start up your server with `shotgun` and verify everything is working. It is as simple as that. It uses a file structure similar to what you would see in a Rails application.
 
-It uses a file structure similar to what you would see with Rails.
-
-Directory structure:
+### App Directory Structure
 
 ```
-├── config.ru
-├── Gemfile
-├── Gemfile.lock
-├── Rakefile
-├── README
 ├── app
 │   ├── controllers
 │   │   └── application_controller.rb
@@ -33,15 +26,19 @@ Directory structure:
 ├── db
 │   └── migrate
 ├── lib
-│   └── .gitkeep
 ├── public
 │   ├── images
 │   ├── javascripts
 │   └── stylesheets
 │       └── main.css
-└── spec
-    ├── application_controller_spec.rb
-    └── spec_helper.rb
+├── spec
+│   ├── application_controller_spec.rb
+│   └── spec_helper.rb
+├── config.ru
+├── Gemfile
+├── Gemfile.lock
+├── Rakefile
+└── README
 ```
 
 ## Installation
@@ -49,13 +46,13 @@ Directory structure:
 BlueEyes should be installed in the global gem space rather than in a Gemfile.
 
 ```bash
-    gem install blue-eyes
+gem install blue-eyes
 ```
 
 ## Commands
 
 ```bash
-blue-eyes -v              # Show blue-eyes version number
+blue-eyes -v              # Show BlueEyes version number
 blue-eyes help [COMMAND]  # Describe available commands or one specific command
 blue-eyes new APP-NAME    # Creates a new Sinatra application
 blue-eyes model NAME      # Generate a model
