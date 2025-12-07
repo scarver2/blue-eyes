@@ -2,17 +2,12 @@
 
 ## Why BlueEyes Exists
 
-<<<<<<< HEAD
 Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. 
-[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it.
-Corneal does for Sinatra what running `rails new` would do. 
-Over time, Brian's focus would shift to the Elixir language, so Ben Lamb forked and renamed the repository to *blue-eyes*. Ben's contributions kept the gem operatational with Ruby 2.
-=======
-Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. 
-[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it.
-Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby. 
-Thus, Ben has forked and renamed it *blue-eyes*.
->>>>>>> 9cb8a8d (improved instructions)
+[Corneal](http://thebrianemory.github.io/corneal) was the closest thing he could find and this gem is based largely off of it.
+Corneal does for Sinatra what running Rails' generators would do. 
+Over time, Brian's focus would shift to the Elixir language and Corneal development would languish.
+Ben Lamb got the inspiration to continue development and forked Corneal with a new name *blue-eyes* as a shout-out to Sinatra.
+Ben's contributions kept the gem operational with Ruby 2.
 
 Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the *BlueEyes* gem as a compliment to his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate repository. 
 His work on BlueEyes supports Ruby 3 and newer versions of Sinatra, Rails, and other gems. 
@@ -64,6 +59,7 @@ BlueEyes should be installed in the global gem space rather than in a Gemfile.
 ```
 
 ## Commands
+
 ```bash
 blue-eyes -v              # Show BlueEyes version number
 blue-eyes help [COMMAND]  # Describe available commands or one specific command
