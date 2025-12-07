@@ -33,11 +33,9 @@ module BlueEyes
 
       # Create empty directories
       def create_empty_directories
-        %w[config/initializers bin lib spec].each do |dir|
+        %w[bin config/initializers db/migrate lib spec].each do |dir|
           empty_directory File.join(@app_path, dir)
         end
-
-        empty_directory File.join(@app_path, 'db/migrate')
 
         create_file File.join(@app_path, 'lib', '.gitkeep')
         template 'config/environment.rb', File.join(@app_path, 'config/environment.rb')
@@ -50,7 +48,7 @@ module BlueEyes
       end
 
       def create_public_directory
-        %w[public/stylesheets public/javascripts public/images].each do |dir|
+        %w[public/images public/javascripts public/stylesheets].each do |dir|
           directory dir, File.join(@app_path, dir)
         end
 
@@ -63,11 +61,8 @@ module BlueEyes
         end
       end
 
-      def create_app_spec
+      def create_spec_directory
         template 'spec/application_controller_spec.rb', File.join(@app_path, 'spec/application_controller_spec.rb')
-      end
-
-      def create_spec_helper
         template 'spec/spec_helper.rb', File.join(@app_path, 'spec/spec_helper.rb')
       end
 
@@ -146,7 +141,6 @@ module BlueEyes
         # TODO: deprecate RVM
         return unless @rvm
 
-        create_file(File.join(@app_path, '.ruby-version'), 'ruby-2.1.0') # TODO: remove hard-coded value
         create_file(File.join(@app_path, '.ruby-gemset'), @app_path)
 
         @bundle = false

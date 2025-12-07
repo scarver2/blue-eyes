@@ -2,16 +2,16 @@
 
 ## Why BlueEyes Exists
 
-Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. 
+BlueEye's original creator, Ben Lamb, was searching for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`.
 [Corneal](http://thebrianemory.github.io/corneal) was the closest thing he could find and this gem is based largely off of it.
-Corneal does for Sinatra what running Rails' generators would do. 
+Corneal does for Sinatra what running Rails' generators would do for a Ruby on Rails application. 
 Over time, Brian's focus would shift to the Elixir language and Corneal development would languish.
 Ben Lamb got the inspiration to continue development and forked Corneal with a new name *blue-eyes* as a shout-out to Sinatra.
 Ben's contributions kept the gem operational with Ruby 2.
 
-Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the *BlueEyes* gem as a compliment to his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate repository. 
-His work on BlueEyes supports Ruby 3 and newer versions of Sinatra, Rails, and other gems. 
-He has also added features to aid rapid development of microsites and APIs.
+Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the *BlueEyes* gem to compliment to his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate repository. 
+His open-source contributions allows BlueEyes to fully support Ruby 3 and newer versions of Sinatra, Rails, and other gems.
+BlueEyes now generates full test suites tools to aid with rapid development of microsites and APIs.
 
 ## How to Start
 
@@ -31,6 +31,8 @@ BlueEyes creates a file structure similar to Ruby on Rails.
 │       └── welcome.erb
 ├── config
 │   ├── initializers
+│   │   ├── database.rb
+│   │   └── redis.rb
 │   └── environment.rb
 ├── db
 │   └── migrate
@@ -43,6 +45,9 @@ BlueEyes creates a file structure similar to Ruby on Rails.
 ├─── spec
 │   ├── application_controller_spec.rb
 │   └── spec_helper.rb
+├── .rubocop_todo.yml
+├── .rubocop.yml
+├── .simplecov
 ├── config.ru
 ├── Gemfile
 ├── Gemfile.lock
@@ -55,7 +60,7 @@ BlueEyes creates a file structure similar to Ruby on Rails.
 BlueEyes should be installed in the global gem space rather than in a Gemfile.
 
 ```bash
-    gem install blue-eyes
+gem install blue-eyes
 ```
 
 ## Commands
@@ -94,7 +99,7 @@ You can then start your server with the bundled `rackup` gem and visit http://lo
 bundle exec rackup
 ```
 
-You can generate a model and migration file:
+In similar Rails' fashion, you can generate a model and migration file:
 
 ```bash
 blue-eyes model NAME
