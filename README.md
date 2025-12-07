@@ -2,10 +2,21 @@
 
 ## Why BlueEyes Exists
 
+<<<<<<< HEAD
 Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. 
-[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. Corneal does for Sinatra what running `rails new` would do. Over time, Brian's focus would shift to the Elixir language, so Ben Lamb forked and renamed the repository to *blue-eyes*. Ben's contributions kept the gem operatational with Ruby 2.
+[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it.
+Corneal does for Sinatra what running `rails new` would do. 
+Over time, Brian's focus would shift to the Elixir language, so Ben Lamb forked and renamed the repository to *blue-eyes*. Ben's contributions kept the gem operatational with Ruby 2.
+=======
+Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. 
+[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it.
+Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby. 
+Thus, Ben has forked and renamed it *blue-eyes*.
+>>>>>>> 9cb8a8d (improved instructions)
 
-Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the *BlueEyes* gem as a compliment to his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate repository. His work on BlueEyes supports Ruby 3 and newer versions of Sinatra, Rails, and other gems. He has also added features to aid rapid development of microsites and APIs.
+Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the *BlueEyes* gem as a compliment to his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate repository. 
+His work on BlueEyes supports Ruby 3 and newer versions of Sinatra, Rails, and other gems. 
+He has also added features to aid rapid development of microsites and APIs.
 
 ## How to Start
 
@@ -46,6 +57,8 @@ BlueEyes creates a file structure similar to Ruby on Rails.
 
 ## Installation
 
+BlueEyes should be installed in the global gem space rather than in a Gemfile.
+
 ```bash
     gem install blue-eyes
 ```
@@ -69,32 +82,32 @@ The controller generator also have an optional views flag `--no-views` to create
 To generate your app:
 
 ```bash
-    blue-eyes new APP-NAME
+blue-eyes new APP-NAME
 ```
 
 Once BlueEyes has generated your app, run `bundle install` from your app's directory:
 
 ```bash
-    cd APP-NAME
-    bundle install
+cd APP-NAME
+bundle install
 ```
 
-You can then start your server with `rackup`:
+You can then start your server with the bundled `rackup` gem and visit http://localhost:9292 to verify your running web application.
 
 ```bash
-    bundle exec rackup
+bundle exec rackup
 ```
 
 You can generate a model and migration file:
 
- ```bash
-    blue-eyes model NAME
+```bash
+blue-eyes model NAME
 ```
 
 You can also generate an entire Rails-style MVC structure complete with a migration file:
 
 ```bash
-    blue-eyes scaffold NAME
+blue-eyes scaffold NAME
 ```
 
 The resulting structure will look like this:
@@ -119,7 +132,7 @@ The resulting structure will look like this:
 You can also add your model attributes when you generate the scaffold structure and have them added to your migration file:
 
 ```bash
-    blue-eyes [model/scaffold] NAME name:string age:integer
+blue-eyes [model/scaffold] NAME name:string age:integer
 ```
 
 ```ruby
@@ -135,19 +148,32 @@ class CreateUsers < ActiveRecord::Migration
 end
 ```
 
-Visit http://localhost:9292 to verify your app is running.
+After creating a model or scaffold, you will need to run `bundle exec rake db:migrate` to update the database table.
 
-You can also verify it is working by running `rspec` to see the passing test:
+You can run the test suite with `bundle exec rspec` to ensure your app is still operational:
 
 ```bash
-    1 example, 0 failures
+Run options: include {focus: true}
+
+All examples were filtered out; ignoring {focus: true}
+....
+
+Finished in 0.04369 seconds (files took 2.31 seconds to load)
+4 examples, 0 failures, 0 pending
 ```
+
+You can run `bundle exec rubocop -A` to automatically fix any linting issues. It can uncover bugs too!
+
+You can run `bundle exec guard` for continuous testing and linting while developing your application.
+
+**Better yet**, you can execute `bin/dev` to start your server, run your tests, and lint your code all at once.
+Any changes to your application will automatically reload your application, run your tests, and/or lint your code.
+💙 Developer happiness acheived. 💙
 
 # Important Files
 
 [CONTRIBUTING](https://github.com/scarver2/blue-eyes/blob/main/CONTRIBUTING.md)
 [LICENSE](https://github.com/scarver2/blue-eyes/blob/main/LICENSE)
 [TODO](https://github.com/scarver2/blue-eyes/blob/main/TODO.md)
-
 
 &copy;2025 Stan Carver II
