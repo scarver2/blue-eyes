@@ -19,7 +19,7 @@
         <%%= yield %>
 
       <footer class="branding">
-        <small>&copy; <%= Time.now.year %> <strong><%= @name.camel_case %></strong></small>
+        <small>&copy;<%= Time.now.year %> <strong><%= @name.camel_case %></strong></small>
       </footer>
     </div>
 

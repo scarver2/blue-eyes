@@ -6,23 +6,19 @@ ruby File.read('.ruby-version').strip
 
 gemspec
 
-source 'https://rubygems.org'
-
 group :development, :test do
-  gem 'fakefs', require: false
-  gem 'guard', require: false
-  gem 'guard-bundler', require: false
-  gem 'guard-minitest', require: false
-  gem 'guard-rubocop', require: false
-  gem 'irb', require: false
-  gem 'minitest', require: false
-  gem 'pry', require: false
-  gem 'rake', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-capybara', require: false
-  gem 'rubocop-minitest', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rake', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'simplecov', require: false
+  gem 'fakefs', '~> 3.0'
+  gem 'guard', '~> 2.16'
+  gem 'guard-bundler', '~> 3.0'
+  gem 'guard-minitest', '~> 2.4'
+  gem 'guard-rubocop', '~> 1.5'
+  gem 'irb', '~> 1.14'
+  gem 'minitest', '~> 5.25'
+  gem 'pry', '~> 0.15'
+  gem 'rake', '~> 13.0'
+  gem 'rubocop', '~> 1.81'
+  gem 'rubocop-minitest', '~> 0.38'
+  gem 'rubocop-performance', '~> 1.26'
+  gem 'rubocop-rake', '~> 0.6'
+  gem 'simplecov', '~> 0.22'
 end

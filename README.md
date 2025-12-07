@@ -3,11 +3,9 @@
 ## Why BlueEyes Exists
 
 Original creator Ben Lamb was looking for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`. 
-[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. 
-Corneal basically does everything equivalent for Sinatra that running `rails new` would do, except, it doesn't seem to be maintained anymore, and thus no longer compatible with modern Ruby.
-Thus, Ben has forked and renamed the repository to *blue-eyes*. 
+[Corneal](http://thebrianemory.github.io/corneal/) was the closest thing he could find and this gem is based largely off of it. Corneal does for Sinatra what running `rails new` would do. Over time, Brian's focus would shift to the Elixir language, so Ben Lamb forked and renamed the repository to *blue-eyes*. Ben's contributions kept the gem operatational with Ruby 2.
 
-Fast-forward to 2025, [Stan Carver II]() maintains the *BlueEyes* gem as part of his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate.
+Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the *BlueEyes* gem as a compliment to his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate repository. His work on BlueEyes supports Ruby 3 and newer versions of Sinatra, Rails, and other gems. He has also added features to aid rapid development of microsites and APIs.
 
 ## How to Start
 
@@ -48,41 +46,56 @@ BlueEyes creates a file structure similar to Ruby on Rails.
 
 ## Installation
 
-    gem install blue_eyes
+```bash
+    gem install blue-eyes
+```
 
 ## Commands
+```bash
+blue-eyes -v              # Show BlueEyes version number
+blue-eyes help [COMMAND]  # Describe available commands or one specific command
+blue-eyes new APP-NAME    # Creates a new Sinatra application
+blue-eyes model NAME      # Generate a model
+blue-eyes controller NAME # Generate a controller
+blue-eyes scaffold NAME   # Generate a model with its associated views and controllers
 ```
-blue_eyes -v              # Show BlueEyes version number
-blue_eyes help [COMMAND]  # Describe available commands or one specific command
-blue_eyes new APP-NAME    # Creates a new Sinatra application
-blue_eyes model NAME      # Generate a model
-blue_eyes controller NAME # Generate a controller
-blue_eyes scaffold NAME   # Generate a model with its associated views and controllers
-```
+
+### Flags
+
 The controller generator also have an optional views flag `--no-views` to create controllers without views.
 
 ## Using BlueEyes
 
 To generate your app:
 
-    blue_eyes new APP-NAME
+```bash
+    blue-eyes new APP-NAME
+```
 
-After BlueEyes is done generating your app, run `bundle install` from your app's directory:
+Once BlueEyes has generated your app, run `bundle install` from your app's directory:
 
+```bash
     cd APP-NAME
     bundle install
+```
 
 You can then start your server with `rackup`:
 
+```bash
     bundle exec rackup
+```
 
 You can generate a model and migration file:
 
-    blue_eyes model NAME
+ ```bash
+    blue-eyes model NAME
+```
 
-You can also generate an entire MVC structure complete with a migration file:
+You can also generate an entire Rails-style MVC structure complete with a migration file:
 
-    blue_eyes scaffold NAME
+```bash
+    blue-eyes scaffold NAME
+```
 
 The resulting structure will look like this:
 
@@ -105,9 +118,11 @@ The resulting structure will look like this:
 
 You can also add your model attributes when you generate the scaffold structure and have them added to your migration file:
 
-    blue_eyes [model/scaffold] NAME name:string age:integer
-
+```bash
+    blue-eyes [model/scaffold] NAME name:string age:integer
 ```
+
+```ruby
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
@@ -120,11 +135,13 @@ class CreateUsers < ActiveRecord::Migration
 end
 ```
 
-Visit [http://localhost:9292/](http://localhost:9292/) to verify your app is running.
+Visit http://localhost:9292 to verify your app is running.
 
 You can also verify it is working by running `rspec` to see the passing test:
 
+```bash
     1 example, 0 failures
+```
 
 # Important Files
 

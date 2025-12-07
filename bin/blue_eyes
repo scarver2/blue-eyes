@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
-$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), "..", "lib")))
+# frozen_string_literal: true
 
-require "blue-eyes"
+$LOAD_PATH.unshift(File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib')))
+
+require 'blue_eyes'
 
 BlueEyes::CLI.start

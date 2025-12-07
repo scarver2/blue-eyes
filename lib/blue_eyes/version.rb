@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BlueEyes
   module VERSION
     MAJOR = 1
