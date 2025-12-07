@@ -15,7 +15,7 @@ BlueEyes now generates full test suites tools to aid with rapid development of m
 
 ## How to Start
 
-Install the gem, run `blue_eyes new APP-NAME`, run `bundle install`, and you're all set! You can start up your server with `rackup` and verify everything is working. It is as simple as that!
+Install the gem, run `blue-eyes new APP-NAME`, run `bundle install`, and you're all set! You can start up your server with `rackup` and verify everything is working. It is as simple as that!
 
 ### App Directory Structure
 
