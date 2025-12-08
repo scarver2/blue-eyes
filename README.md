@@ -13,9 +13,11 @@ Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the
 His open-source contributions allows BlueEyes to fully support Ruby 3 and newer versions of Sinatra, Rails, and other gems.
 BlueEyes now generates full test suites tools to aid with rapid development of microsites and APIs.
 
-## How to Start
+## How to Begin
 
-Install the gem, run `blue-eyes new APP-NAME`, run `bundle install`, and you're all set! You can start up your server with `rackup` and verify everything is working. It is as simple as that!
+`gem install blue-eyes` gem, run `blue-eyes new APP-NAME`, `cd` into your app's folder, then run `bundle install`. 
+You're all set to start developing your Sinatra application.
+You can start up your server with `rackup` and verify everything is working. It is as simple as that!
 
 ### App Directory Structure
 
@@ -29,6 +31,8 @@ BlueEyes creates a file structure similar to Ruby on Rails.
 │   └── views
 │       ├── layout.erb
 │       └── welcome.erb
+├── bin
+│   └── dev
 ├── config
 │   ├── initializers
 │   │   ├── database.rb
@@ -51,6 +55,9 @@ BlueEyes creates a file structure similar to Ruby on Rails.
 ├── config.ru
 ├── Gemfile
 ├── Gemfile.lock
+├── Guardfile
+├── Procfile
+├── Procfile.dev
 ├── Rakefile
 └── README		
 ```
@@ -114,20 +121,19 @@ blue-eyes scaffold NAME
 The resulting structure will look like this:
 
 ```
-└─app
-  ├── controllers
-  │   ├──application_controller.rb
-  │   └──new_model_controller.rb
-  ├── models
-  │   └──new_model.rb
-  └── views
-      ├──new_models
-      │  ├──index.html.rb.erb
-      │  ├──show.html.rb.erb
-      │  ├──new.html.rb.erb
-      │  └──edit.html.rb.erb
-      ├── layout.erb
-      └── welcome.erb
+└─ app
+│  ├── controllers
+│  │   ├── application_controller.rb
+│  ├── models
+│  │   └── model_name.rb
+│  └── views
+│      └── model_names
+│          ├──index.html.erb
+│          ├──show.html.erb
+│          ├──new.html.erb
+│          └──edit.html.erb
+└── db/migrate
+    └── timestamp_create_models.rb
 ```
 
 You can also add your model attributes when you generate the scaffold structure and have them added to your migration file:
