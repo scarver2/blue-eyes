@@ -1,5 +1,7 @@
 ![BlueEyes](lib/blue_eyes/generators/app/templates/public/images/blue-eyes-small.png)
 
+[![Gem Version](https://badge.fury.io/rb/blue-eyes.svg)](https://badge.fury.io/rb/blue-eyes)
+
 ## Why BlueEyes Exists
 
 BlueEye's original creator, Ben Lamb, was searching for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`.
