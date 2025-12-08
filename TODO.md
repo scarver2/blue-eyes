@@ -13,7 +13,7 @@
 * [ ] Implement GitHub Actions workflow
 * [x] Make gem fully-compatible with Ruby 3.x
 * [x] Fix folder naming convention (`lib/blue_eyes` instead of `lib/blue-eyes`)
-* [ ] Publish BlueEyes to RubyGems
+* [x] Publish BlueEyes to RubyGems
 * [ ] Create GitHub product page (scarver2.github.io/blue-eyes)
 * [ ] Create GitHub Wiki
 * [ ] Add Frankie's template for monolith
