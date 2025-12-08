@@ -15,8 +15,15 @@ Gem::Specification.new do |spec|
   spec.email       = 'stan@a1webconsulting.com'
   spec.homepage    = 'https://github.com/scarver2/blue-eyes'
   spec.metadata    = {
+    # TODO: 'bug_tracker_uri'   => 'https://example.com/user/bestgemever/issues',
+    # TODO: 'changelog_uri'     => 'https://example.com/user/bestgemever/CHANGELOG.md',
+    'documentation_uri' => 'https://github.com/scarver2/blue-eyes/blob/main/README.md',
+    # TODO: 'funding_uri'       => 'https://example.com/donate'
+    # TODO: 'homepage_uri'      => 'https://bestgemever.example.io',
+    # TODO: 'mailing_list_uri'  => 'https://groups.example.com/bestgemever',
+    'rubygems_mfa_required' => 'true',
     'source_code_uri' => 'https://github.com/scarver2/blue-eyes',
-    'rubygems_mfa_required' => 'true'
+    'wiki_uri' => 'https://github.com/scarver2/blue-eyes/wiki'
   }
 
   spec.executables = ['blue-eyes']

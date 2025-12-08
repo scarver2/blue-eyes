@@ -8,6 +8,7 @@ module BlueEyes
         return gsub(/^./, &:capitalize) unless match?(/[_-]/)
 
         altered_self = downcase.capitalize
+
         altered_self.scan(/[_-][a-zA-Z]/).each do |match|
           altered_self.gsub!(match, match[1].upcase)
         end
