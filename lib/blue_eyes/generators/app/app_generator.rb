@@ -20,7 +20,9 @@ module BlueEyes
       # Creates instance variables from options passed to BlueEyes.
       def setup
         @app_path = name.directory_name
-        @name     = name.file_name
+        @app_name = @name = name.file_name # TODO: remove duplicate variables
+        @ruby_version = RUBY_VERSION # TODO: make this configurable
+        @port = 9292 # TODO: make this configurable
 
         options.each do |key, value|
           instance_variable_set :"@#{key}", value
@@ -81,6 +83,14 @@ module BlueEyes
 
       def create_rackup_config
         template 'config.ru.erb', File.join(@app_path, 'config.ru')
+      end
+
+      def create_dockerfile
+        template 'Dockerfile.erb', File.join(@app_path, 'Dockerfile')
+      end
+
+      def create_docker_compose
+        template 'docker-compose.yml.erb', File.join(@app_path, 'docker-compose.yml')
       end
 
       def create_gemfile

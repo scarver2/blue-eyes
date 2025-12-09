@@ -1,0 +1,20 @@
+# Base Image from Ruby:Version
+FROM ruby:<%= @ruby_version %>
+
+# Set working directory
+WORKDIR /<%= @app_name %>
+
+# Copy the app's source code and assets into the container
+ADD . /<%= @app_name %>
+
+# Install the app's production RubyGem dependencies
+RUN bundle config set without 'development test'
+RUN bundle install
+
+RUN RACK_ENV=production SINATRA_ENV=production bundle exec rake db:migrate
+
+# Expose the app's port
+EXPOSE <%= @port %>
+
+# Run the app
+CMD ["bundle", "exec", "rackup", "-p", "<%= @port %>" ]
