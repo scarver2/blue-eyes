@@ -1,6 +1,8 @@
+<%- if @redis %>
+redis: redis-server
+<%- end %>
 guard: bundle exec guard
 # TODO: js: webpack
 # TODO: css: bin/rails tailwindcss:watch
-# TODO: redis: redis-server
 # TODO: sidekiq: bundle exec sidekiq -C config/sidekiq.yml
 web: bundle exec rackup config.ru -p $PORT
