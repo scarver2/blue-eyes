@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: ruby (4.0)
+    runs-on: ubuntu-latest
+
+    env:
+      CI: "true"
+      COVERAGE: "true"
+      SIMPLECOV: "true"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Show versions
+        run: |
+          ruby -v
+          bundle -v
+
+      - name: Lint (RuboCop) — no autocorrect in CI
+        run: bundle exec rubocop --parallel
+
+      - name: Test (Minitest)
+        run: bundle exec rake test
+
+      - name: Upload coverage artifact (if present)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage
+          if-no-files-found: ignore
+
+      - name: Upload JUnit artifact (if present)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit
+          path: tmp/test-results
+          if-no-files-found: ignore
