@@ -36,16 +36,16 @@ jobs:
           ruby -v
           bundle -v
 
-      # - name: Lint (RuboCop)
-      #   run: bundle exec rubocop
+      - name: Lint (RuboCop)
+        run: bundle exec rubocop --force-exclusion
 
       - name: Test (Minitest)
         run: bundle exec rake test TESTOPTS="--verbose"
 
-      # - name: Upload coverage artifact (if present)
-      #   if: always()
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: coverage
-      #     path: coverage
-      #     if-no-files-found: ignore
+      - name: Upload coverage artifact (if present)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage
+          if-no-files-found: ignore

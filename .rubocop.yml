@@ -9,6 +9,12 @@ plugins:
 AllCops:
   NewCops: enable
   TargetRubyVersion: 4.0
+  Exclude:
+    - '.bundle/**/*'
+    - 'app/**/*'
+    - 'coverage/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
 
 Gemspec/RequiredRubyVersion:
   Exclude:
