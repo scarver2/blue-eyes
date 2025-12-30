@@ -36,8 +36,8 @@ jobs:
           ruby -v
           bundle -v
 
-      - name: Lint (RuboCop) — no autocorrect in CI
-        run: bundle exec rubocop --parallel
+      - name: Lint (RuboCop)
+        run: bundle exec rubocop
 
       - name: Test (Minitest)
         run: bundle exec rake test TESTOPTS="--verbose"
