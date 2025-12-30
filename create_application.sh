@@ -12,7 +12,7 @@ gem build blue-eyes.gemspec
 bundle exec bin/blue-eyes new App
 
 # Add local BlueEyes gem to the app
-echo "\n\ngem 'blue-eyes', path: '..'" >> app/Gemfile
+printf "\n\ngem 'blue-eyes', path: '..'" >> app/Gemfile
 
 cd app
 

@@ -12,6 +12,7 @@
 * [x] Implement SimpleCov test coverage analysis
 * [ ] Implement GitHub Actions workflow
 * [x] Make gem fully-compatible with Ruby 3.x
+* [x] Make gem compatible with Ruby 4.x
 * [x] Fix folder naming convention (`lib/blue_eyes` instead of `lib/blue-eyes`)
 * [x] Publish BlueEyes to RubyGems
 * [ ] Create GitHub product page (scarver2.github.io/blue-eyes)
@@ -37,7 +38,8 @@
 * [x] Replace shotgun with Rackup
 * [x] Replace Thin gem with Puma
 * [x] Run generated app's test suite
-* [x] Update app for Ruby 3
+* [x] Make app compatible with Ruby 3
+* [x] Make app compatible with Ruby 4
 * [ ] Modernize HTML templates, perhaps using [HTML5 Boilerplate](https://html5boilerplate.com) or [Tailwind](https://tailwindcss.com)
 * [x] Add Procfile
 * [x] Add Guardfile

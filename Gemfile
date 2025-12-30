@@ -9,7 +9,7 @@ gemspec
 group :development, :test do
   gem 'fakefs', '~> 3.0'
   gem 'guard', '~> 2.16'
-  gem 'guard-bundler', '~> 3.0'
+  gem 'guard-bundler', github: 'scarver2/guard-bundler', branch: 'bundler-4', require: false
   gem 'guard-minitest', '~> 2.4'
   gem 'guard-rubocop', '~> 1.5'
   gem 'irb', '~> 1.14'

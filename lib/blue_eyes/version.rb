@@ -4,7 +4,7 @@ module BlueEyes
   module VERSION
     MAJOR = 1
     MINOR = 3
-    TINY  = 4
+    TINY  = 5
 
     STRING = [MAJOR, MINOR, TINY].join('.')
   end
