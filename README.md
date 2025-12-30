@@ -2,7 +2,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/blue-eyes.svg)](https://badge.fury.io/rb/blue-eyes)
 
-## Why BlueEyes Exists
+[BlueEyes](https://github.com/scarver2/blue-eyes) is a command-line tool used to generate robust Sinatra apps using familiar _Rails-like_ commands.
+
+## The History of BlueEyes
 
 BlueEye's original creator, Ben Lamb, was searching for a way to build a Sinatra skeleton similar to running how Rails creates applications using `rails new APP-NAME`.
 [Corneal](http://thebrianemory.github.io/corneal) was the closest thing he could find and this gem is based largely off of it.
@@ -12,10 +14,10 @@ Ben Lamb got the inspiration to continue development and forked Corneal with a n
 Ben's contributions kept the gem operational with Ruby 2.
 
 Fast-forward to 2025, [Stan Carver II](https://scarver2.github.io) maintains the *BlueEyes* gem to compliment to his ongoing work on [Frankie](https://github.com/scarver2/frankie), the essential Sinatra boilerplate repository. 
-His open-source contributions allows BlueEyes to fully support Ruby 3 and newer versions of Sinatra, Rails, and other gems.
+His open-source contributions allows BlueEyes to fully support Ruby 3+ and newer versions of Sinatra, Rails, and associated gems.
 BlueEyes now generates full test suites tools to aid with rapid development of microsites and APIs.
 
-## How to Begin
+## How to Use BlueEyes
 
 `gem install blue-eyes` gem, run `blue-eyes new APP-NAME`, `cd` into your app's folder, then run `bundle install`. 
 You're all set to start developing your Sinatra application.
@@ -149,8 +151,7 @@ class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :name
-      t.age :integer
-
+      t.integer :age
       t.timestamps null: false
     end
   end
