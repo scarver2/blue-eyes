@@ -36,6 +36,11 @@ jobs:
           ruby -v
           bundle -v
 
+      - name: Debug rubocop config resolution
+        run: |
+          bundle exec rubocop -V
+          bundle exec rubocop --show-cops | head -n 50
+
       - name: Lint (RuboCop)
         run: bundle exec rubocop
 
