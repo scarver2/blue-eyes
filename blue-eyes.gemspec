@@ -32,9 +32,9 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 3.0', '< 5.0'
 
   spec.files =
+    Dir.glob('bin/**/*', File::FNM_DOTMATCH) +
     Dir.glob('lib/**/*', File::FNM_DOTMATCH) +
-    Dir.glob('test/**/*') +
-    %w[.ruby-version .simplecov Gemfile Gemfile.lock Guardfile LICENSE Rakefile README.md]
+    %w[CONTRIBUTING.md LICENSE README.md]
 
   spec.add_dependency('active_model_serializers', '~> 0.10.15')
   spec.add_dependency('activesupport', '~> 7.0')
