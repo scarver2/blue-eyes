@@ -1,6 +1,7 @@
 *.gem
 .bundle/install.log
 .DS_Store
-/app/
-/coverage/
+app/
+coverage/
+tmp/
 Gemfile.lock
