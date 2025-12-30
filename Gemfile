@@ -22,7 +22,3 @@ group :development, :test do
   gem 'rubocop-rake', '~> 0.6'
   gem 'simplecov', '~> 0.22'
 end
-
-group :test do
-  gem 'minitest-reporters'
-end
