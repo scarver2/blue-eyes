@@ -2,9 +2,9 @@ inherit_from:
   - .rubocop_todo.yml
 
 plugins:
-  - rubocop-minitest
   - rubocop-performance
   - rubocop-rake
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
